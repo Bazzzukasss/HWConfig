@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/mramor4.png</file>
+        <file>images/send cmd.png</file>
+        <file>images/send file.png</file>
+        <file>images/batch cmd.png</file>
+        <file>images/ico.png</file>
+    </qresource>
+</RCC>

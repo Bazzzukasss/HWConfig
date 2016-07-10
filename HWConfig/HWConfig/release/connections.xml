@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<connections>
+	
+	<connection name="Conection 1" active="1">
+		<session user="arsen" password="qazsedc" host="192.168.1.125" port="22" protocol="ssh">Ubuntu 1</session>
+		<commands>
+			<command name="TEST" type="send cmd" description="test cmd" active="1">ls -l</command>
+			<command name="LS" type="send cmd" description="show file list" active="1">ls -l</command>
+			<command name="DF" type="send cmd" description="disc free" active="1">df</command>
+			<command name="UPLOAD" type="send file" description="upload file" active="1">filename.tmp /tmp</command>
+			<command name="UPDATE" type="batch cmd" description="update rootines" active="1">LS DF UPLOAD</command>
+			<command name="COMPLEX" type="batch cmd" description="complex cmd" active="1">UPDATE TEST</command>
+		</commands>
+	</connection>
+	
+	<connection name="Conection 2" active="0">
+		<session user="arsen" password="qazsedc" host="192.168.1.125" port="22" protocol="ssh">Ubuntu 2</session>
+		<commands>
+			<command name="LS" type="send cmd" description="show file list" active="1">ls -l</command>
+			<command name="DF" type="send cmd" description="disc free" active="1">df</command>
+			<command name="UPLOAD" type="send file" description="upload file" active="0">filename.tmp /tmp</command>
+			<command name="UPDATE" type="batch cmd" description="update rootines" active="1">UPLOAD LS</command>
+		</commands>
+	</connection>
+	<connection name="Conection 3" active="1">
+		<session user="arsen" password="qazsedc" host="192.168.1.125" port="22" protocol="ssh">Ubuntu 3</session>
+		<commands>
+			<command name="LS" type="send cmd" description="show file list" active="1">ls -l</command>
+			<command name="DF" type="send cmd" description="disc free" active="0">df</command>
+			<command name="UPLOAD" type="send file" description="upload file" active="0">filename.tmp /tmp</command>
+			<command name="UPDATE" type="batch cmd" description="update rootines" active="1">UPLOAD LS</command>
+		</commands>
+	</connection>
+
+</connections>
